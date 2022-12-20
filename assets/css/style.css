@@ -45,7 +45,7 @@ ul {
 .logo {
     height: 100px;
     width: 170px;
-    background-image: url(..//img/logo_blanco.png);
+    background-image: url("..//img/logo_blanco.png");
     background-repeat: no-repeat;
     background-size: contain;
     margin: 20px 0 0 0;
