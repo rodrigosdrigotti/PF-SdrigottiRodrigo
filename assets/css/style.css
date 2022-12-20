@@ -45,7 +45,7 @@ ul {
 .logo {
     height: 100px;
     width: 170px;
-    background-image: url(../img/logo_blanco.png);
+    background-image: url(..//img/logo_blanco.png);
     background-repeat: no-repeat;
     background-size: contain;
     margin: 20px 0 0 0;
@@ -207,7 +207,7 @@ ul {
   display: block;
 }
 .encabezado {
-    background-image: url(./assets/img/portada.jpg);
+    background-image: url(..//img/portada.jpg);
     width: 93%;
     height: 300px;
     margin: auto;
@@ -220,7 +220,7 @@ ul {
     align-items: end;
 }
 .encabezadoRutinas {
-    background-image: url(./assets/img/rutinas.jpg);
+    background-image: url(..//img/rutinas.jpg);
     width: 93%;
     height: 500px;
     margin: auto;
@@ -236,7 +236,7 @@ ul {
     height: 100vh;
     width: 100%;
     margin-top: -200px;
-    background-image: url(./assets/img/background3.jpg);
+    background-image: url(..//img/background3.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -249,7 +249,7 @@ ul {
     color: #FFF;
 }
 .encabezadoContacto {
-    background-image: url(./assets/img/contacto.jpg);
+    background-image: url(..//img/contacto.jpg);
     width: 93%;
     height: 500px;
     margin: auto;
@@ -693,7 +693,7 @@ h5:hover {
 }
 @media (min-width: 1600px) {
     .encabezado {
-        background-image: url(./assets/img/portada.jpg);
+        background-image: url(..//img/portada.jpg);
         width: 83%;
         height: 750px !important;
         background-size: cover;
@@ -706,7 +706,7 @@ h5:hover {
         background-position: 50%;
     }
     .encabezadoRutinas {
-        background-image: url(./assets/img/rutinas.jpg);
+        background-image: url(..//img/rutinas.jpg);
         width: 93%;
         height: 750px !important;
         background-size: cover;
@@ -743,7 +743,7 @@ h5:hover {
     .logo {
         height: 125px;
         width: 200px;
-        background-image: url(./assets/img/logo_blanco.png);
+        background-image: url(..//img/logo_blanco.png);
         background-repeat: no-repeat;
         background-size: contain;
         margin: 0 0 0 20px;
