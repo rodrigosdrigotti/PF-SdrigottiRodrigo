@@ -1104,6 +1104,12 @@ ul {
 }
 
 .infoPersonal p {
+  font-size: 16px;
+  color: #3c3c3c;
+}
+
+.fotosPersonales p {
+  font-size: 16px;
   color: #3c3c3c;
 }
 
