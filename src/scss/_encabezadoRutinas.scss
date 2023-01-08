@@ -1,0 +1,37 @@
+.encabezadoRutinas {
+    background-image: url("..//img/rutinas.jpg");
+    width: 93%;
+    height: 500px;
+    margin: auto;
+    margin-top: 30px;
+    background-size: cover;
+    background-position: center 80%;
+    border-radius: 20px; 
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    @media (min-width: 1600px) {
+        height: 750px !important;
+        background-position: 580%;
+    }
+    @media (min-width: 768px) {
+        height: 550px;
+    }
+    > .encabezado-info {
+        color: #FFF;
+        padding: 0 0 5px 20px;
+        text-shadow: 1px 0px 10px rgb(0, 0, 0);
+        > h1 {
+            @media (max-width: 570px) {
+                font-size: 14px;
+                margin: 0 0 5px 0;
+            }
+        > p {
+            @media (max-width: 570px) {
+                font-size: 9px;
+                margin: 0 0 5px 0;
+            }
+            }
+        }
+    }
+}

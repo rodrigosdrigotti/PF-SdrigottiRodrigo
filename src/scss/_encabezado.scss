@@ -1,0 +1,41 @@
+.encabezado {
+    background-image: url("..//img/portada.jpg");
+    width: 93%;
+    height: 300px;
+    margin: auto;
+    margin-top: 30px;
+    background-size: cover;
+    background-position: center 80%;
+    border-radius: 20px; 
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    @media (min-width: 1600px) {
+        width: 83%;
+        height: 750px !important;
+        background-position: 50%;
+    }
+    @media (min-width: 768px) {
+        height: 550px;
+    }
+    @media (max-width: 570px) {
+        height: 230px;
+    }
+    > .encabezado-info {
+        color: #FFF;
+        padding: 0 0 5px 20px;
+        text-shadow: 1px 0px 10px rgb(0, 0, 0);
+        > h1 {
+            @media (max-width: 570px) {
+                font-size: 14px;
+                margin: 0 0 5px 0;
+            }
+        > p {
+            @media (max-width: 570px) {
+                font-size: 9px;
+                margin: 0 0 5px 0;
+            }
+            }
+        }
+    }
+}

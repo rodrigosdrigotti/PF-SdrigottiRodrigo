@@ -1,0 +1,61 @@
+.niveles {
+    width: 90%;
+    border-radius: 20px;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @media (min-width: 1600px) {
+        width: 60% !important;
+    }
+    @media (min-width: 768px) {
+        width: 90%;
+    }
+    > .nivel {
+        background-color: rgb(241, 241, 241);
+        width: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row wrap;
+        
+        > .nivel-img {
+            display: none;
+            @media (min-width: 768px) {
+                display: block;
+                width: 50%;
+                position: relative;
+                border-radius: 20px;
+                overflow: hidden;
+            }
+            > img {
+                @media (min-width: 768px) {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        > .nivel-info {
+            background-color: rgb(241, 241, 241);
+            width: 100%;
+            position: relative;
+            border-radius: 20px;
+            padding: 20px;
+            @media (min-width: 768px) {
+                background-color: rgb(241, 241, 241);
+                width: 50%;
+                position: relative;
+                margin: auto 0;
+                border-radius: 20px;
+                padding: 20px;
+            }
+            > h4 {
+                @media (min-width: 768px) {
+                    margin-bottom: 20px;
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,246 @@
+.header-sinBS {
+    grid-area: header;
+    background-color:  rgb(53, 53, 53);
+    box-shadow: 1px 1px 5px 0px #85888C;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    @media (min-width: 875px) {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10;
+    }
+    > .logo {
+        height: 100px;
+        width: 170px;
+        background-image: url("..//img/logo_blanco.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin: 20px 0 0 0;
+        @media (min-width: 875px) {
+            height: 125px;
+            width: 200px;
+            margin: 0 0 0 20px;
+        }
+    }
+
+    > .barraMenu {
+        display: flex;
+        flex-direction: column;
+        align-self: start;
+        .hamb {
+            cursor: pointer;
+            float: left;
+            padding: 40px 20px;
+            @media (min-width: 875px) {
+                display: none;
+            }
+        }
+        .hamb-line {
+            background: white;
+            display: block;
+            height: 2px;
+            position: relative;
+            width: 24px;
+            &::before {
+                background: white;
+                content: '';
+                display: block;
+                height: 100%;
+                position: absolute;
+                transition: all .2s ease-out;
+                width: 100%;
+                top: 5px;
+            }
+            &::after {
+                background: white;
+                content: '';
+                display: block;
+                height: 100%;
+                position: absolute;
+                transition: all .2s ease-out;
+                width: 100%;
+                top: -5px;
+            }
+        }
+        .side-menu {
+            display: none;
+        } 
+        .side-menu:checked ~ nav {
+            max-height: 100%;
+        }
+        .side-menu:checked ~ .hamb .hamb-line {
+            background: transparent;
+            &::before {
+                transform: rotate(-45deg);
+                top:0;
+            }
+            &::after {
+                transform: rotate(45deg);
+                top:0;
+            }
+        }
+        .nav {
+            width: 100%;
+            height: 100%;
+            margin-top: 70px;
+            font-size: 18px;
+            position: fixed;
+            background-color:  rgb(53, 53, 53);
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height .5s ease-out;
+            
+            @media (min-width: 875px) {
+                margin-top: 65px;
+                max-height: none;
+                position: relative;
+                width: fit-content;
+                background-color: transparent;
+            }
+            > .menu {
+                @media (min-width: 875px) {
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                    height: 70px;
+                    margin: 0;
+                    padding: 0;
+                    text-align: center;
+                    border: 1px solid rgb(255, 255, 255);
+                }
+
+                > li {
+                    @media (min-width: 875px) {
+                        text-align: center;
+                        &:hover {
+                            background:rgba(213, 213, 213, 0.3);
+                        }
+                    }
+                    > a {
+                        display: block;
+                        padding: 20px;
+                        color: white;
+                        text-decoration: none;
+                        &:hover {
+                            background-color: #85888C;
+                        }
+                        @media (min-width: 875px) {
+                            display: block;
+                            text-decoration: none;
+                            color: rgb(255, 255, 255);
+                            font-size: 20px;
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    > .navIcons {
+        display: flex;
+        align-items: center;
+        align-self: end;
+        color: #FFF;
+        margin-top: -58px;
+        @media (min-width: 875px) {
+            align-self: center;
+            margin: 10px 10px 0 0;
+        }
+        > .buscador {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(-0,-0);
+            transition: all 1s;
+            width: 30px;
+            height: 30px;
+            background: white;
+            box-sizing: border-box;
+            border-radius: 25px;
+            border: 4px solid white;
+            padding: 5px;
+            @media (min-width: 1015px) {
+                transform: none;
+                transition: none;
+                width: 150px;
+            }
+            &:hover,
+            &:valid {
+                width: 150px;
+                cursor: pointer;
+            }
+            > input {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;;
+                height: 22.5px;
+                line-height: 30px;
+                outline: 0;
+                border: 0;
+                display: none;
+                font-size: 1em;
+                border-radius: 20px;
+                padding: 0 20px;
+                color: black;
+                @media (min-width: 1015px) {
+                    display: block;
+                }
+                &:hover,
+                &:valid {
+                    display: block;
+                }
+            }
+            a {
+                display: none;
+                position: absolute;
+                top: 70px;
+                bottom:0;
+                left: 0;
+                right: 0;
+                font-size: 20px;
+                color: white;
+                text-align: center; 
+                width: 100%;
+                &:valid {
+                    display: block;
+                }
+            }
+            > .fa{
+                box-sizing: border-box;
+                padding: 4px;
+                width: 22.5px;
+                height: 22.5px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                border-radius: 50%;
+                color: rgb(53, 53, 53);
+                text-align: center;
+                font-size: 1.1em;
+                transition: all 1s;
+                @media (min-width: 1015px) {
+                    background: rgb(53, 53, 53);
+                    color: white;
+                    transition: none;
+                }
+                &:hover,
+                &:valid {
+                    background: rgb(53, 53, 53);
+                    color: white;
+                }
+            }
+        }
+        > .glyphicon {
+            font-size: 25px;
+            padding: 0 15px;
+        }         
+    }
+}

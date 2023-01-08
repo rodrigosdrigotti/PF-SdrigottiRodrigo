@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+@import "reset";
+@import "header";
+@import "footer";
+@import "encabezado";
+@import "encabezadoRutinas";
+@import "sectionMiniDesc";
+@import "sectionModosCalis";
+@import "sectionNiveles";
+@import "sectionFiltrosRutinas";
+@import "sectionFotosPers";
+@import "tarjetasTrucos";
+@import "mixin";
+@import "formularioContacto";
+
+.container-fluid {
+    font-family: "Quicksand", sans-serif !important;
+}
+.body-sinBS {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 1fr 50px;
+    grid-template-areas: "header header header"
+                         "main   main   main"
+                         "footer footer footer";
+}
+.main-sinBS {
+    grid-area: main;
+}
+.conocenos-background {
+    height: 100vh;
+    width: 100%;
+    margin-top: -200px;
+    background-image: url("..//img/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    text-align: start;
+    padding: 20px;
+    color: #FFF;
+}
+.titulo {
+    text-align: center;
+    margin: 40px 0 10px 0;
+}
+.descripcion {
+    background-color: rgb(255, 255, 255);
+    width: 85%;
+    border-radius: 15px;
+    text-align: center;
+    padding: 30px;
+    margin: 0 auto;
+    box-shadow: 0px 8px 25px -5px rgba(0, 0, 0, 0.07);
+}
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.linea {
+    width: 80%;
+    margin: 20px;
+    opacity: 0.5;
+}
+.contenido h3 {
+    text-align: center;
+}
+.infoPersonal {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    margin: 30px auto;
+}
+.infoPersonal p {
+    color: #3c3c3c;
+}
+.videoPersonal video{
+    margin: 50px 0 10px 0;
+    width: 70%;
+    height: 70%;
+}
+@media (min-width: 768px) {
+    .container-fluid {
+        font-size: 16px !important;
+    }
+    .linea {
+        width: 40%;
+        margin: 20px;
+        opacity: 0.5;
+    }
+}
+@media (max-width: 570px) {
+    .body-sinBS {
+        font-size: 12px;
+    }
+    .titulo {
+        font-size: 24px;
+        margin: 30px 0 0 0;
+    }
+}
+

@@ -1,0 +1,73 @@
+.formularioContacto {
+    background-color:#2f2f3595;
+    max-width: 800px;
+    width: 100%;
+    margin: 60px auto 20px auto;
+    border-radius: 10px;
+    color: white;
+    padding: 30px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 60px;
+    grid-template-areas:  "zona1 zona1"
+                          "zona2 zona3"
+                          "zona4 zona5"
+                          "zona6 zona6"
+                          "zona7 zona7"
+                          "zona8 zona9";
+
+    @media(max-width:800px){
+        width: 90vw;
+        margin: 20px auto;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 60px;
+        grid-template-areas:  "zona1 zona1"
+                              "zona2 zona2"
+                              "zona3 zona3"
+                              "zona4 zona4"
+                              "zona5 zona5"
+                              "zona6 zona6"
+                              "zona7 zona7"
+                              "zona8 zona9";
+    }
+    @for $var from 1 to 10 {
+        @if($var == 1){
+            h2:nth-child(#{$var}){
+                grid-area: zona#{$var};
+                justify-self: center;
+                font-weight: 400;
+            }
+        }
+        @else if ($var == 8){
+            button:nth-child(8){
+                grid-area: zona#{$var};
+                @include boton(150px,rgb(44, 44, 51),white);
+            }
+        }
+        @else if ($var == 9){
+            button:nth-child(9){
+                grid-area: zona#{$var};
+                @include boton(150px,rgb(83, 83, 83),white);
+            }
+        }
+        @else {
+            label:nth-child(#{$var}){
+                grid-area: zona#{$var};
+            }
+        }
+    }
+    label {
+        display: flex;
+        flex-direction: column;
+    }
+    label input, label textarea {
+        background-color:transparent;
+        border: 0;
+        border-bottom: 1px solid white;
+        margin-top: 10px;
+        outline: none;
+        color: white;
+    }
+}
